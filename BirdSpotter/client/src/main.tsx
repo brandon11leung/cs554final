@@ -6,8 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import axios from 'axios';
 import {CookiesProvider} from 'react-cookie'
 
-const env = (await axios.get(`https://bird-spotter.azurewebsites.net/env`)).data;
-console.log(env)
+const env = (await axios.get(`http://localhost:3000/env`)).data;
 ReactDOM.createRoot(document.getElementById('root')!).render(
         <BrowserRouter>
             <CookiesProvider defaultSetOptions={{path:'/'}}>
